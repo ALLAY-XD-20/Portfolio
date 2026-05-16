@@ -165,7 +165,7 @@ portfolio/
 MIT License - feel free to use this project for your own portfolio!
 
 ## Credits
-
+web by ALLAY XD 20
 Built with ❤️ using Next.js and modern web technologies.
 
 ---
