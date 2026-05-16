@@ -1,36 +1,173 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Developer Portfolio
+
+A premium, modern developer portfolio built with Next.js 15, React, TypeScript, Tailwind CSS, and Framer Motion.
+
+![Portfolio Preview](https://via.placeholder.com/1200x600/030712/00f5ff?text=Portfolio+Preview)
+
+## Features
+
+- 🚀 **Modern Tech Stack** - Next.js 15, React 18, TypeScript, Tailwind CSS
+- 🎨 **Premium Design** - Glassmorphism, neon accents, cyberpunk aesthetic
+- ✨ **Smooth Animations** - Framer Motion powered transitions
+- 🌙 **Dark Mode** - Beautiful dark theme with gradient accents
+- 📱 **Fully Responsive** - Mobile, tablet, and desktop layouts
+- 🔍 **SEO Optimized** - Meta tags, Open Graph, Twitter cards
+- ⚡ **Performance Optimized** - Dynamic imports, lazy loading
+- 🎯 **Sections**:
+  - Animated hero with typing effect
+  - About section with skills
+  - Tech stack showcase
+  - Projects gallery with filtering
+  - GitHub statistics
+  - Experience timeline
+  - Contact form
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/portfolio.git
+
+# Navigate to the project
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view your portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in the root directory:
 
-## Learn More
+```env
+# Update your profile data in src/data/profile.ts
+# No environment variables required for basic setup
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Update Profile Data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Edit `src/data/profile.ts` to customize:
 
-## Deploy on Vercel
+- Your name and bio
+- GitHub username
+- Social links
+- Skills and projects
+- Experience timeline
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Theme Colors
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Edit `src/app/globals.css` to customize:
+
+- Primary color (currently cyan: `#00f5ff`)
+- Secondary color (currently purple: `#a855f7`)
+- Accent colors
+- Glass effects
+
+## Deployment
+
+### Vercel (Recommended)
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+Or connect your GitHub repository to Vercel for automatic deployments.
+
+### Docker
+
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Project Structure
+
+```
+portfolio/
+├── src/
+│   ├── app/               # Next.js app router
+│   │   ├── globals.css    # Global styles
+│   │   ├── layout.tsx     # Root layout
+│   │   └── page.tsx       # Main page
+│   ├── components/
+│   │   ├── sections/      # Page sections
+│   │   │   ├── hero.tsx
+│   │   │   ├── about.tsx
+│   │   │   ├── techstack.tsx
+│   │   │   ├── projects.tsx
+│   │   │   ├── github-stats.tsx
+│   │   │   ├── experience.tsx
+│   │   │   ├── contact.tsx
+│   │   │   ├── navbar.tsx
+│   │   │   ├── footer.tsx
+│   │   │   ├── particles.tsx
+│   │   │   └── loading-screen.tsx
+│   │   └── ui/            # Reusable UI components
+│   │       ├── button.tsx
+│   │       ├── card.tsx
+│   │       ├── badge.tsx
+│   │       ├── input.tsx
+│   │       └── textarea.tsx
+│   ├── data/
+│   │   └── profile.ts     # Profile data
+│   └── lib/
+│       └── utils.ts       # Utility functions
+├── public/                # Static files
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── next.config.ts
+```
+
+## Technologies Used
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **UI Components**: Custom + Radix UI
+- **Fonts**: Geist (Next.js default)
+
+## License
+
+MIT License - feel free to use this project for your own portfolio!
+
+## Credits
+
+Built with ❤️ using Next.js and modern web technologies.
+
+---
+
+⭐ Star this repo if you found it useful!
