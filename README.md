@@ -33,7 +33,7 @@ A premium, modern developer portfolio built with Next.js 15, React, TypeScript, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/ALLAY-XD-20/Portfolio.git
 
 # Navigate to the project
 cd portfolio
